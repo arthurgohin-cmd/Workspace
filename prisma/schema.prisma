@@ -1,0 +1,114 @@
+// Prisma schema — CARVER INVEST
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum ProjectStatus {
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum City {
+  PARIS
+  CANNES
+  MIAMI
+}
+
+enum MediaType {
+  PHOTO
+  VIDEO
+  TOUR_3D
+}
+
+enum MediaPhase {
+  BEFORE
+  AFTER
+  GENERAL
+}
+
+model Project {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  title       String
+  city        City
+  location    String // ex: "Castellaras, Mouans-Sartoux" ou "06210"
+  country     String        @default("France")
+  status      ProjectStatus
+  propertyType String       @default("Villa")
+  surfaceM2   Int?
+  budgetLabel String? // ex: "1,8 M€ d'opération" — texte libre, volontairement flou
+  summary     String // texte court FR, traduit auto en EN
+  summaryEn   String?
+  description String // texte long FR
+  descriptionEn String?
+  startDate   DateTime?
+  endDate     DateTime?
+  featured    Boolean       @default(false)
+  order       Int           @default(0)
+  media       Media[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([status])
+  @@index([city])
+}
+
+model Media {
+  id        String     @id @default(cuid())
+  project   Project    @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+  type      MediaType
+  phase     MediaPhase @default(GENERAL)
+  url       String
+  caption   String?
+  order     Int        @default(0)
+  createdAt DateTime   @default(now())
+
+  @@index([projectId])
+}
+
+model TeamMember {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  bio       String?
+  bioEn     String?
+  photoUrl  String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model InvestorInquiry {
+  id               String   @id @default(cuid())
+  name             String
+  email            String
+  phone            String?
+  ticketRange      String?
+  message          String
+  projectInterest  String?
+  createdAt        DateTime @default(now())
+  handled          Boolean  @default(false)
+}
+
+model ContactInquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+  handled   Boolean  @default(false)
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}

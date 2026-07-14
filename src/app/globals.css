@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #241b14;
+  --ink-soft: #2f241b;
+  --stone-100: #f1e8da;
+  --stone-200: #e7dac5;
+  --stone-300: #d8c7a9;
+  --stone-400: #8a7a64;
+  --paper: #fbf6ee;
+  --terracotta: #b3542e;
+  --terracotta-light: #d97a50;
+  --terracotta-dark: #8a3f21;
+  --sage: #6b7a5e;
+  --ochre: #c08a3e;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-stone-100: var(--stone-100);
+  --color-stone-200: var(--stone-200);
+  --color-stone-300: var(--stone-300);
+  --color-stone-400: var(--stone-400);
+  --color-paper: var(--paper);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-light: var(--terracotta-light);
+  --color-terracotta-dark: var(--terracotta-dark);
+  --color-sage: var(--sage);
+  --color-ochre: var(--ochre);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--terracotta);
+  color: var(--paper);
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* chisel-mark divider — a quiet nod to "carving" used sparingly between sections */
+.chisel-rule {
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    100deg,
+    var(--stone-300) 0px,
+    var(--stone-300) 14px,
+    transparent 14px,
+    transparent 22px
+  );
+}
+
+.container-page {
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 64px);
+}
