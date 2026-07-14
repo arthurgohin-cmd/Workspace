@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "statusLine": {
+        "type": "command",
+        "command": "node ~/.claude/plugins/claude-hud/dist/index.js",
+        "padding": 0
+    },
+    "hooks": {
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "node ~/.claude/hooks/caveman-activate.js"
+                    }
+                ]
+            }
+        ],
+        "UserPromptSubmit": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "node ~/.claude/hooks/caveman-mode-tracker.js"
+                    }
+                ]
+            }
+        ]
+    },
+    "env": {
+        "CAVEMAN_DEFAULT_MODE": "full",
+        "CALLME_PHONE_PROVIDER": "telnyx",
+        "CALLME_PHONE_ACCOUNT_SID": "",
+        "CALLME_PHONE_AUTH_TOKEN": "",
+        "CALLME_PHONE_NUMBER": "",
+        "CALLME_USER_PHONE_NUMBER": "",
+        "CALLME_OPENAI_API_KEY": "",
+        "CALLME_NGROK_AUTHTOKEN": ""
+    },
+    "permissions": {
+        "allow": [
+            "Skill",
+            "Skill(caveman)",
+            "Skill(caveman-commit)",
+            "Skill(caveman-review)",
+            "Skill(caveman-help)",
+            "Skill(caveman-compress)",
+            "Skill(humanizer)",
+            "Skill(planning-with-files)",
+            "Skill(phone-input)"
+        ]
+    }
+}
