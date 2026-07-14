@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATRIUM — Marchand de biens d'exception</title>
+<meta name="description" content="ATRIUM sélectionne, transforme et révèle des biens d'exception. Découvrez nos réalisations et confiez-nous votre projet immobilier.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <span class="preloader__mark">ATRIUM</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo">ATRIUM</a>
+  <nav class="nav__links">
+    <a href="#realisations">Réalisations</a>
+    <a href="#agence">L'agence</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav__cta">Estimer mon bien</a>
+  <button class="nav__burger" id="navBurger" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-mobile" id="navMobile">
+  <a href="#realisations">Réalisations</a>
+  <a href="#agence">L'agence</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="nav-mobile__cta">Estimer mon bien</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal-line">Marchand de biens — depuis 2011</p>
+    <h1 class="hero__title">
+      <span class="reveal-line">Nous révélons</span>
+      <span class="reveal-line"><em>l'exceptionnel</em></span>
+    </h1>
+    <p class="hero__sub reveal-line">Nous dénichons, transformons et révélons des biens rares — pour vivre autrement, ou pour investir avec justesse.</p>
+    <div class="hero__actions reveal-line">
+      <a href="#realisations" class="btn btn--light">Voir nos réalisations</a>
+      <a href="#contact" class="btn btn--ghost">Vendre mon bien</a>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <span>Faites défiler</span>
+    <div class="hero__scroll-line"><i></i></div>
+  </div>
+</section>
+
+<!-- ============ WALKTHROUGH (scroll-driven "visite") ============ -->
+<section class="walk" id="walk">
+  <div class="walk__pin">
+    <div class="walk__frame is-active" data-frame="1">
+      <div class="walk__img walk__img--facade"></div>
+      <div class="walk__caption">
+        <span class="walk__tag">01 — Façade</span>
+        <h3>Une architecture qui s'impose,<br>sans jamais forcer.</h3>
+      </div>
+    </div>
+    <div class="walk__frame" data-frame="2">
+      <div class="walk__img walk__img--hall"></div>
+      <div class="walk__caption">
+        <span class="walk__tag">02 — Circulation</span>
+        <h3>Chaque espace se découvre<br>comme une respiration.</h3>
+      </div>
+    </div>
+    <div class="walk__frame" data-frame="3">
+      <div class="walk__img walk__img--salon"></div>
+      <div class="walk__caption">
+        <span class="walk__tag">03 — Séjour</span>
+        <h3>Un séjour baigné<br>de lumière naturelle.</h3>
+      </div>
+    </div>
+    <div class="walk__frame" data-frame="4">
+      <div class="walk__img walk__img--terrasse"></div>
+      <div class="walk__caption">
+        <span class="walk__tag">04 — Extérieur</span>
+        <h3>La vue, au coucher<br>du soleil.</h3>
+        <a href="#contact" class="btn btn--light btn--sm">Demander une visite</a>
+      </div>
+    </div>
+    <div class="walk__progress">
+      <i data-dot="1" class="is-active"></i><i data-dot="2"></i><i data-dot="3"></i><i data-dot="4"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="stats__grid">
+    <div class="stats__item">
+      <span class="stats__num" data-count="140">0</span><span class="stats__suffix">+</span>
+      <span class="stats__label">Biens transformés</span>
+    </div>
+    <div class="stats__item">
+      <span class="stats__num" data-count="15">0</span>
+      <span class="stats__label">Ans d'expertise</span>
+    </div>
+    <div class="stats__item">
+      <span class="stats__num" data-count="98">0</span><span class="stats__suffix">%</span>
+      <span class="stats__label">Clients satisfaits</span>
+    </div>
+    <div class="stats__item">
+      <span class="stats__num" data-count="35000">0</span><span class="stats__suffix">m²</span>
+      <span class="stats__label">Surface rénovée</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RÉALISATIONS ============ -->
+<section class="projects" id="realisations">
+  <div class="section-head">
+    <p class="section-head__eyebrow">Portfolio</p>
+    <h2 class="section-head__title">Nos réalisations</h2>
+    <p class="section-head__sub">Une sélection de biens sourcés, rénovés et révélés par nos équipes. Contenu de démonstration — à remplacer par vos biens réels.</p>
+  </div>
+  <div class="projects__grid">
+
+    <article class="card">
+      <div class="card__media card__media--a">
+        <span class="card__status card__status--sold">Vendu</span>
+      </div>
+      <div class="card__body">
+        <span class="card__loc">Neuilly-sur-Seine</span>
+        <h3>Villa Ecrin</h3>
+        <ul class="card__meta">
+          <li>320 m²</li><li>6 pièces</li><li>Jardin 800 m²</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__media card__media--b">
+        <span class="card__status card__status--available">Disponible</span>
+      </div>
+      <div class="card__body">
+        <span class="card__loc">Le Vésinet</span>
+        <h3>Maison Lumière</h3>
+        <ul class="card__meta">
+          <li>210 m²</li><li>5 pièces</li><li>Piscine</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__media card__media--c">
+        <span class="card__status card__status--progress">En rénovation</span>
+      </div>
+      <div class="card__body">
+        <span class="card__loc">Saint-Cloud</span>
+        <h3>Hôtel Particulier Marceau</h3>
+        <ul class="card__meta">
+          <li>480 m²</li><li>9 pièces</li><li>Parc 1200 m²</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__media card__media--d">
+        <span class="card__status card__status--available">Disponible</span>
+      </div>
+      <div class="card__body">
+        <span class="card__loc">Boulogne-Billancourt</span>
+        <h3>Loft Belvédère</h3>
+        <ul class="card__meta">
+          <li>165 m²</li><li>4 pièces</li><li>Terrasse</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="section-head section-head--light">
+    <p class="section-head__eyebrow">Méthode</p>
+    <h2 class="section-head__title">Notre process, en quatre temps</h2>
+  </div>
+  <div class="process__list">
+    <div class="process__item">
+      <span class="process__num">01</span>
+      <h3>Recherche &amp; sourcing</h3>
+      <p>Nous identifions des biens à fort potentiel, hors marché ou sous-valorisés, sur des secteurs ciblés.</p>
+    </div>
+    <div class="process__item">
+      <span class="process__num">02</span>
+      <h3>Acquisition</h3>
+      <p>Nous structurons l'opération, négocions et sécurisons l'achat en toute transparence.</p>
+    </div>
+    <div class="process__item">
+      <span class="process__num">03</span>
+      <h3>Rénovation</h3>
+      <p>Architectes et artisans partenaires transforment le bien avec exigence, jusqu'au moindre détail.</p>
+    </div>
+    <div class="process__item">
+      <span class="process__num">04</span>
+      <h3>Révélation</h3>
+      <p>Le bien est présenté, valorisé et proposé à l'acquisition — prêt à être habité ou investi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AGENCE ============ -->
+<section class="about" id="agence">
+  <div class="about__media"></div>
+  <div class="about__content">
+    <p class="section-head__eyebrow">L'agence</p>
+    <h2>Une exigence artisanale,<br>une vision d'investisseur.</h2>
+    <p>ATRIUM est une structure de marchand de biens qui conjugue le regard d'un investisseur et l'exigence d'un architecte. Depuis 2011, nous sourçons, rénovons et révélons des biens rares en Île-de-France — pour des particuliers exigeants comme pour des investisseurs avertis.</p>
+    <p>Chaque projet est conduit avec la même discipline : comprendre le potentiel d'un lieu, le transformer avec justesse, et le révéler dans toute sa valeur.</p>
+    <a href="#contact" class="btn btn--dark">Parlons de votre projet</a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <div class="section-head section-head--light">
+      <p class="section-head__eyebrow">Contact</p>
+      <h2 class="section-head__title">Un projet, une question ?</h2>
+      <p class="section-head__sub">Vous souhaitez vendre un bien, investir ou simplement échanger sur un projet — écrivez-nous.</p>
+    </div>
+    <form class="contact__form" id="contactForm">
+      <div class="form__row">
+        <div class="form__field">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__field">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form__field">
+          <label for="subject">Votre demande</label>
+          <select id="subject" name="subject">
+            <option value="vendre">Je souhaite vendre un bien</option>
+            <option value="acheter">Je suis intéressé par un bien</option>
+            <option value="investir">Je souhaite investir</option>
+            <option value="autre">Autre demande</option>
+          </select>
+        </div>
+      </div>
+      <div class="form__field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--dark btn--wide">Envoyer ma demande</button>
+      <p class="form__note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <span class="footer__logo">ATRIUM</span>
+    <nav class="footer__links">
+      <a href="#realisations">Réalisations</a>
+      <a href="#agence">L'agence</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="footer__legal">© 2026 ATRIUM. Tous droits réservés.</span>
+  </div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
