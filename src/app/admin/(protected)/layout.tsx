@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { verifySession } from "@/lib/dal";
 import { LogoutButton } from "./logout-button";
 
@@ -16,8 +17,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <div className="flex min-h-screen bg-stone-100">
       <aside className="flex w-60 flex-none flex-col justify-between bg-ink px-5 py-8 text-paper">
         <div>
-          <Link href="/admin" className="font-display text-lg tracking-wide">
-            CARVER<span className="text-terracotta-light"> INVEST</span>
+          <Link href="/admin" className="flex items-center gap-2">
+            <Image src="/brand/icon-white.png" alt="" width={28} height={26} className="h-7 w-auto" />
+            <span className="font-display text-lg tracking-wide">
+              CARVER<span className="text-terracotta-light"> INVEST</span>
+            </span>
           </Link>
           <nav className="mt-10 flex flex-col gap-1">
             {NAV.map((item) => (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 
@@ -15,8 +16,11 @@ export function SiteHeader({ locale, dict }: { locale: Locale; dict: Dictionary 
   return (
     <header className="sticky top-0 z-40 border-b border-stone-300/60 bg-stone-100/90 backdrop-blur">
       <div className="container-page flex h-20 items-center justify-between gap-6">
-        <Link href={`/${locale}`} className="font-display text-xl tracking-wide text-ink">
-          CARVER<span className="text-terracotta"> INVEST</span>
+        <Link href={`/${locale}`} className="flex items-center gap-2.5">
+          <Image src="/brand/icon-ink.png" alt="" width={36} height={34} className="h-9 w-auto" priority />
+          <span className="font-display text-xl tracking-wide text-ink">
+            CARVER<span className="text-terracotta"> INVEST</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
